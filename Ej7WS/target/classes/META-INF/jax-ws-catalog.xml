@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="https://www.dataaccess.com/webservicesserver/numberconversion.wso?WSDL" uri="wsdl/www.dataaccess.com/webservicesserver/numberconversion.wso.wsdl"/>
+    <system systemId="http://www.dneonline.com/calculator.asmx?wsdl" uri="wsdl/www.dneonline.com/calculator.asmx.wsdl"/>
+    <system systemId="https://webservices.daehosting.com/services/isbnservice.wso?wsdl" uri="wsdl/webservices.daehosting.com/services/isbnservice.wso.wsdl"/>
+    <system systemId="https://www.w3schools.com/xml/tempconvert.asmx?wsdl" uri="wsdl/www.w3schools.com/xml/tempconvert.asmx.wsdl"/>
+</catalog>
