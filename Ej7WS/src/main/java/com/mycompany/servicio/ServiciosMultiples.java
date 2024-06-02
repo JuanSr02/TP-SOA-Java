@@ -1,4 +1,4 @@
-package com.mycompany.modelo;
+package com.mycompany.servicio;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;

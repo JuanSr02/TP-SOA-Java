@@ -1,6 +1,6 @@
-package com.mycompany.controlador;
+package com.mycompany.publicador;
 
-import com.mycompany.modelo.ServiciosMultiples;
+import com.mycompany.servicio.ServiciosMultiples;
 import java.util.ArrayList;
 import java.util.HashMap;
 import spark.Request;
