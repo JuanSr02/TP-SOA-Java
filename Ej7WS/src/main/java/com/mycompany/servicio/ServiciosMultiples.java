@@ -4,9 +4,16 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 import java.math.*;
 import java.util.ArrayList;
+import javax.xml.ws.Endpoint;
 
 @WebService
 public class ServiciosMultiples {
+    
+        public static void main(String[] args) {
+
+       Endpoint.publish("http://localhost:8080/servicio",new ServiciosMultiples());      
+    }
+
 
     @WebMethod
     public ArrayList<String> ServicioPrincipal(long nro){

@@ -1,8 +1,8 @@
 package com.mycompany.publicador;
 
-import com.mycompany.servicio.ServiciosMultiples;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import spark.Request;
 import spark.Response;
 import spark.Route;
@@ -17,14 +17,28 @@ public class ServiciosMultiplesControlador {
     };
 
     public static Route getServicio = (Request request, Response response) -> {
+        List<String> resultado = null;
         long numero = 0;
         try {
             numero = Long.parseLong(request.queryParams("nro"));
         } catch (NumberFormatException e) {
             System.out.println("Numero invalido");
         }
-        ServiciosMultiples servicio = new ServiciosMultiples();
-        ArrayList<String> resultado = servicio.ServicioPrincipal(numero);
+        
+        try { // Call Web Service Operation
+            com.mycompany.servicio.ServiciosMultiplesService service = new com.mycompany.servicio.ServiciosMultiplesService();
+            com.mycompany.servicio.ServiciosMultiples port = service.getServiciosMultiplesPort();
+            // TODO initialize WS operation arguments here
+            long arg0 = numero;
+            // TODO process result here
+            java.util.List<java.lang.String> result = port.servicioPrincipal(arg0);
+            System.out.println("Result = "+result);
+            resultado = result;
+        } catch (Exception ex) {
+            // TODO handle custom exceptions here
+        }
+        
+        
         HashMap model = new HashMap();
         model.put("resultados",resultado);
         return ViewUtil.render(request, model, Path.Template.PANTALLASERVICIO);

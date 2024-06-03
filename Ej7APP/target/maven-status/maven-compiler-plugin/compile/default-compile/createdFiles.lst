@@ -1,0 +1,13 @@
+util\Path$Web.class
+util\Path$Template.class
+com\mycompany\publicador\ServiciosMultiplesControlador.class
+com\mycompany\servicio\package-info.class
+com\mycompany\servicio\ServiciosMultiplesService.class
+com\mycompany\publicador\Principal.class
+com\mycompany\servicio\ObjectFactory.class
+spark\template\velocity\VelocityTemplateEngine.class
+com\mycompany\servicio\ServicioPrincipalResponse.class
+util\Path.class
+util\ViewUtil.class
+com\mycompany\servicio\ServiciosMultiples.class
+com\mycompany\servicio\ServicioPrincipal.class

@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mycompany</groupId>
-    <artifactId>Ej7WS</artifactId>
+    <artifactId>Ej7APP</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <build>
@@ -31,34 +31,16 @@
                         </goals>
                         <configuration>
                             <wsdlFiles>
-                                <wsdlFile>www.dataaccess.com/webservicesserver/numberconversion.wso.wsdl</wsdlFile>
+                                <wsdlFile>localhost_8080/servicio.wsdl</wsdlFile>
                             </wsdlFiles>
                             <packageName></packageName>
                             <vmArgs>
                                 <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
                             </vmArgs>
-                            <wsdlLocation>https://www.dataaccess.com/webservicesserver/numberconversion.wso?WSDL</wsdlLocation>
-                            <staleFile>${project.build.directory}/jaxws/stale/numberconversion.wso.stale</staleFile>
+                            <wsdlLocation>http://localhost:8080/servicio?wsdl</wsdlLocation>
+                            <staleFile>${project.build.directory}/jaxws/stale/servicio.stale</staleFile>
                         </configuration>
-                        <id>wsimport-generate-numberconversion.wso</id>
-                        <phase>generate-sources</phase>
-                    </execution>
-                    <execution>
-                        <goals>
-                            <goal>wsimport</goal>
-                        </goals>
-                        <configuration>
-                            <wsdlFiles>
-                                <wsdlFile>webservices.daehosting.com/services/isbnservice.wso.wsdl</wsdlFile>
-                            </wsdlFiles>
-                            <packageName></packageName>
-                            <vmArgs>
-                                <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
-                            </vmArgs>
-                            <wsdlLocation>https://webservices.daehosting.com/services/isbnservice.wso?wsdl</wsdlLocation>
-                            <staleFile>${project.build.directory}/jaxws/stale/isbnservice.wso.stale</staleFile>
-                        </configuration>
-                        <id>wsimport-generate-isbnservice.wso</id>
+                        <id>wsimport-generate-servicio</id>
                         <phase>generate-sources</phase>
                     </execution>
                 </executions>
