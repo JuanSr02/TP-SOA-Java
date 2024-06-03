@@ -3,10 +3,16 @@ package com.mycompany.tp7arquitecturasw.ej4;
 import java.util.Scanner;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
+import javax.xml.ws.Endpoint;
 
 // APLICACION QUE SOLICITA POR PANTALLA EL ISO DE UN PAIS Y TE CEVUELVE LA INFO COMPLETA UTILIZANDO EL WS
 @WebService
 public class PaisServicio {
+    
+     public static void main(String[] args) {
+        PaisServicio servicio = new PaisServicio();
+        Endpoint.publish("http://localhost:8080/servicioPais",servicio);
+    }
 
     @WebMethod
     public void ServicioPaises() {

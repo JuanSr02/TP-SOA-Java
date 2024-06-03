@@ -4,6 +4,7 @@ package com.mycompany.tp7arquitecturasw.ej5;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import java.util.HashMap;
+import javax.xml.ws.Endpoint;
 
 /* EN ESTE EJERCICIO PASE A SERVICIO WEB UN PROGRAMA JAVA SIMPLE QUE 
 SE LE INGRESAN LETRAS Y SE VAN CONTANDO LAS LETRAS QUE FUERON INGRESADAS Y LA IDEA ES QUE FINALICE CUANDO UNA LETRA FUE INGRESADA K VECES */
@@ -13,6 +14,10 @@ public class ContadorDeLetrasService {
     boolean x= false;
     private final HashMap<String, Integer> conteoLetras = new HashMap<>();
     private int k = 5; // Configura un valor predeterminado o permite configurarlo
+    
+        public static void main(String[] args) {
+        Endpoint.publish("http://localhost:8080/contadorLetras", new ContadorDeLetrasService());
+    }
 
     @WebMethod
     public String ingresarLetra(String letra) {
